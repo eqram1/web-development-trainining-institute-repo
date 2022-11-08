@@ -1,12 +1,16 @@
 
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
+import router from './Router/Routes/Routes';
 
-function App() {
+
+const App = () => {
+
   return (
-    <div className="App">
-      <button className="btn btn-accent">Button</button>
+    <div className='max-w-2xl'>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
-}
+};
 
 export default App;
