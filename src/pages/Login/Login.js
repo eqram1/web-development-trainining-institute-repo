@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Login = () => {
+    const handlelogin = event => {
+        event.preventDefault();
+    }
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -9,7 +12,7 @@ const Login = () => {
                     <p className="py-6">Please log in.</p>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div className="card-body">
+                    <form onSubmit={handlelogin} className="card-body">
 
                         <div className="form-control">
                             <label className="label">
@@ -29,7 +32,7 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
