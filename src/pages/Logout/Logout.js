@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Logout = () => {
+
+    const { createUser } = useContext(AuthContext);
     const handlelogout = event => {
         event.preventDefault();
+
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(err => console.error(err));
     }
     return (
         <div className="hero min-h-screen bg-base-200">
