@@ -1,0 +1,9 @@
+Four Question with Answer:
+Q.1. Difference between SQL and NOSQL?
+Answer=SQL vs NoSQL The main difference between SQL and NoSQL is that they are known as relational and non-relational database structures, respectively, that are used in different modes for implementing and manipulating data.
+Q.2. What is JWT and How does it work?
+Answer=JWT stands for JSON web token the common definition says that it is an open industry standard RFC 7519 method for representing claims securely between two parties so lets break it up into a simpler logic to understand its utility and the way it works!
+Q.3. What is the difference between javascript and NodeJS?
+Answer=Difference between JavaScript and Node.js JavaScript is a proper high-level programming language used to create web scripts whereas Node.js is a run time environment built on google’s v8 engine. JavaScript is executed in the browser whereas using Node.js gives us the ability to execute JavaScript outside the browser.
+Q.4. How does NodeJS handle multiple requeasts at the same time?
+Answer=return new Promise (function (resolve, reject) { setTimeout ( function () { resolve (5000) }, 5000 ) // run the given function in 5000ms }); In this way, the event loop will start the second request while the first is waiting. So if you request them at the same time, both will finish at the same time.
