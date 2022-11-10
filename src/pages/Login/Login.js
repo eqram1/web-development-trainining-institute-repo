@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { json, Navigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
@@ -15,7 +16,27 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                const currentUser = {
+                    email: user.email
+                }
+                console.log(currentUser);
+                //get jwt token
+                fetch('https://online-trainer-server.vercel.app/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        //local storage is the easiest but not the best not the best place
+                        localStorage.setItem('online-trainer', data.token)
+                        navigate(from, { replace: true });
+                    });
+
             })
             .then(error => console.log(error));
     }
