@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/banner/7.jfif';
 
 const Footer = () => {
@@ -10,25 +11,20 @@ const Footer = () => {
             </div>
             <div>
                 <span className="footer-title">Services</span>
-                <a href='/' className="link link-hover">HTML-5</a>
-                <a href='/' className="link link-hover">CSS</a>
-                <a href='/' className="link link-hover">JS</a>
-                <a href='/' className="link link-hover">REACT-BOOTSTRAP</a>
-                <a href='/' className="link link-hover">TAILWIND</a>
-                <a href='/' className="link link-hover">FIREBASE-MONGODB</a>
+                <Link to='/' className="link link-hover">HTML-5</Link>
+                <Link to='/' className="link link-hover">CSS</Link>
+                <Link to='/' className="link link-hover">JS</Link>
+                <Link to='/' className="link link-hover">REACT-BOOTSTRAP</Link>
+                <Link to='/' className="link link-hover">TAILWIND</Link>
+                <Link to='/' className="link link-hover">FIREBASE-MONGODB</Link>
             </div>
             <div>
                 <span className="footer-title">Course fees</span>
-                <a href='/' className="link link-hover"></a>
-                <a href='/' className="link link-hover"></a>
-                <a href='/' className="link link-hover"></a>
-                <a href='/' className="link link-hover"></a>
+
             </div>
             <div>
                 <span className="footer-title">Course duration</span>
-                <a href='/' className="link link-hover"></a>
-                <a href='/' className="link link-hover"></a>
-                <a href='/' className="link link-hover"></a>
+
             </div>
         </footer>
     );
