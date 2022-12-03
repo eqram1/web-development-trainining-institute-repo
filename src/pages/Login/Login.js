@@ -34,7 +34,7 @@ const Login = () => {
                         console.log(data);
                         //local storage is the easiest but not the best not the best place
                         localStorage.setItem('online-trainer', data.token)
-                        navigate(from, { replace: true });
+
                     });
 
             })
